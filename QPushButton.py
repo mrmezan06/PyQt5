@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton
 import sys
 from PyQt5 import QtGui
 from PyQt5.QtCore import QRect
+from PyQt5 import QtCore
 
 
 class Window(QMainWindow):
@@ -23,6 +24,9 @@ class Window(QMainWindow):
         button = QPushButton("Click Me", self)
         # button.move(100, 100)
         button.setGeometry(QRect(100, 100, 111, 50))
+        button.setIcon(QtGui.QIcon("male.png"))
+        button.setIconSize(QtCore.QSize(40, 40))
+        button.setToolTip("<h1 style=\"color:green;\">This is action button</h1>")
 
 
 if __name__ == "__main__":
